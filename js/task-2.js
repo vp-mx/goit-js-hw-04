@@ -1,7 +1,9 @@
 function calcAverageCalories(days) {
-  const calArr = days.map((day) => day.calories);
-  const totalCalories = calArr.reduce((acc, curr) => acc + curr, 0);
-  return totalCalories / calArr.length || 0;
+  let totalCalories = 0;
+  for (const day of days) {
+    totalCalories += day.calories;
+  }
+  return totalCalories / days.length || 0;
 }
 
 console.log(
