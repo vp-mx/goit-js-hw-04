@@ -1,6 +1,6 @@
 function isEnoughCapacity(products, containerSize) {
   return (
-    Object.values(products).reduce((acc, product) => acc + product, 0) >=
+    Object.values(products).reduce((acc, product) => acc + product, 0) <=
     containerSize
   );
 }
